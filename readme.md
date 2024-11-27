@@ -28,14 +28,9 @@ Hello! I’m looking to have a personalized weather and task planning applicatio
    - **Weather-Linked Planning**: The app should allow me to manage my to-dos with the weather in mind. For instance, I might want to schedule outdoor activities on sunny days.
    - **Saving Tasks**: I’d prefer my tasks to be saved even if I close the app so that I don’t have to re-enter them each time.
 
-4. **Date Input for Specific Weather**
-   - **Future Forecast**: Sometimes, I may want to know the weather for a particular future date. There should be an option to select a date to view the forecast for that specific day (if available).
-
-5. **Additional Features**
+4. **Additional Features**
    - **Cookies for Preferences**: It would be helpful if the app remembers some of my settings (like my preferred temperature unit or location) even if I haven’t saved them as tasks.
    - **Map Display**: If possible, a small map showing my selected location would add a nice touch, so I can see where I am or where I’m checking the weather for.
-   - **Multiple Sources**: I’d like the app to use reliable weather data from multiple sources, if possible, to give the most accurate forecast.
-   - **Date and Input Validation**: To keep things smooth, ensure that only valid dates and inputs are processed by the app.
 
 ---
 
@@ -45,9 +40,12 @@ Overall, I want a simple yet functional weather and task app that I can open to 
 ### Notes
 I’m not looking for anything too complex or heavily detailed; this is just a personal project to make my daily planning a bit easier and more weather-aware. I’m open to any suggestions for making it more practical and user-friendly. Thank you!
 
+geolocation api is deprecated in chrome, you would have to manually enable access to location for the file.
+
+
 
 ### Links:
 OpenStreetMap: https://www.openstreetmap.org/
-
-### Mockup:
-https://img.enacton.com/ShareX/2024/11/FPqVifWrc8.png
+Leaflet.js: https://leafletjs.com/reference.html
+chart js: https://www.chartjs.org/docs/latest/
+nominatum api: https://nominatim.org/release-docs/latest/
