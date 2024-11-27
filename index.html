@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Companion & Task Planner</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <link rel="icon" type="image/x-icon" href="1530434.png">
+</head>
+<body onload="getLocation()">
+  <header>
+    <h1 style="color: azure;">Weather Companion & Task Planner</h1>
+  </header>
+  <main>
+    <section class="weather-section">
+      <div class="current-weather">       
+            
+            <h1>Weather App</h1>
+            <div id="search-container">
+            <input type="text" id="locationInput" placeholder="Enter a city" autocomplete="off">
+            <div id ="dropdown"></div>
+          </div>
+          <div id="pressables">
+            <button id="searchButton">Search</button>
+            <button id="currentButton">use current location</button>
+            <div id="unitToggle">
+              <label class="switch">
+                  <input type="checkbox" id="unitSwitch">
+                  <span class="slider"></span>
+              </label>
+              <span id="unitLabel" style="font-size: medium;">Metric</span>
+          </div>
+          </div> 
+          <div id="weather-details" style="display: flex; margin: ;">
+            <div class="weather-info">
+                <h2 id="location"></h2>
+                <p>Temperature: <span id="temperature"></span></p>
+                <p>Description: <span id="description"></span></p>
+                <p>Wind speed:<span id="windspeed"></span></p>
+                <p>Humidity: <span id="humidity"></span></p>
+                <p id="p1"></p>
+            </div>      
+            <div>
+              <div class="weekly-forecast-section" style="margin:2rem">
+                <button id="weekButton" type="button" style="background-color: indianred;">Weekly Forecast</button>
+                <div id="weeklyForecast" class="forecast-container">
+                    <!-- Weekly forecast cards will be dynamically inserted here -->
+                </div>
+              </div>           
+            </div>
+          </div>
+        
+      
+    </section>
+
+    <section class="planning-section">
+      <div class="to-do-list">
+        <h3 id="selected-date">Tasks for: </h3>
+  <div class="stats">
+    <div>Total Tasks: <span id="total-tasks">0</span></div>
+    <div>Total Completed Tasks: <span id="completed-tasks">0</span></div>
+  </div>
+  
+  <form class="add-task-form" id="add-task-form">
+    <input type="text" id="task-input" placeholder="Enter a task" required>
+    <button type="submit">Add Task</button>
+  </form>
+  <ul class="task-list" id="task-list"></ul>
+
+      </div>
+      <div id="calendar">
+        
+      </div>
+    </section>
+
+    <section class="additional-section">
+      <div id="weatherMap" style="height: 400px; width: 50%;"></div>
+      <div class="weather-graph">
+        <button id="showGraph" >Show Graph</button>
+        <canvas id="myChart"></canvas>
+      </div>
+    </section>
+    
+  </main>
+  <script src="location_weather.js"></script> 
+  <script src="weeklyforecast.js"></script>
+  <script src="graph.js"></script>
+  <script src="to_do.js"></script>
+  <script src="search_api.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>
